@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+from os import popen
+
+with popen("cat /proc/device-tree/model") as file_obj:
+    for pr in file_obj.readlines():
+        print(pr)
